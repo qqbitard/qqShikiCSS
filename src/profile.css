@@ -2,7 +2,7 @@
   position: relative;
   display: inline-block;
 
-  font-family: "Bungee Shade", cursive !important;
+  font-family: "GlitchGoblin", cursive !important;
   font-size: inherit;          /* НЕ ломаем размеры */
   line-height: 1.1;            /* даём место эффекту */
   padding: 0.15em 0.2em;       /* защита от обрезания */
