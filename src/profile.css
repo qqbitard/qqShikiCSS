@@ -9,3 +9,16 @@
 
   overflow: visible;           /* важно */
 }
+
+#profiles_show .profile-head .c-brief header h1::before,
+#profiles_show .profile-head .c-brief header h1::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+  font: inherit;
+  line-height: inherit;
+
+  opacity: 0;
+}
