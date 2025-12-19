@@ -12,7 +12,28 @@
   font-style: normal;
   font-display: swap;
 }
+@keyframes glitch-shift-1 {
+  0%, 90%, 100% { transform: none; opacity: 0; }
+  91% { transform: translate(2px, -1px); opacity: 1; }
+  92% { transform: translate(-2px, 1px); }
+  93% { transform: translate(1px, 0); }
+}
 
+@keyframes glitch-shift-2 {
+  0%, 92%, 100% { transform: none; opacity: 0; }
+  93% { transform: translate(-2px, 1px); opacity: 1; }
+  94% { transform: translate(2px, -1px); }
+}
+
+#profiles_show .profile-head .c-brief header h1::before {
+  color: var(--glitch-color-1);
+  animation: glitch-shift-1 6s infinite steps(1);
+}
+
+#profiles_show .profile-head .c-brief header h1::after {
+  color: var(--glitch-color-2);
+  animation: glitch-shift-2 7.5s infinite steps(1);
+}
 #profiles_show .profile-head .c-brief header h1 {
   position: relative;
   display: inline-block;
