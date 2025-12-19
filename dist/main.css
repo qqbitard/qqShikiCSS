@@ -53,7 +53,7 @@
 /* glitch-слои */
 #profiles_show .profile-head .c-brief header h1::before,
 #profiles_show .profile-head .c-brief header h1::after {
-  content: attr(data-text);    /* ВАЖНО: реальный ник */
+  content: var(nick);
   position: absolute;
   top: 0;
   left: 0;
