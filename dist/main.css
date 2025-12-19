@@ -5,4 +5,8 @@
 
 
 
+/* TEST: should be clearly visible */
 
+#profiles_show .profile-head {
+  background: red !important;
+}
