@@ -3,16 +3,17 @@
   display: inline-block;
 
   font-family: "GlitchGoblin", cursive !important;
-  font-size: inherit;          /* НЕ ломаем размеры */
+  font-size: inherit;          /* не ломаем размеры */
   line-height: 1.1;            /* даём место эффекту */
   padding: 0.15em 0.2em;       /* защита от обрезания */
 
-  overflow: visible;           /* важно */
+  overflow: visible;           /* важно для glitch */
 }
 
+/* glitch-слои */
 #profiles_show .profile-head .c-brief header h1::before,
 #profiles_show .profile-head .c-brief header h1::after {
-  content: var(--user-nickname);
+  content: attr(data-text);    /* ВАЖНО: реальный ник */
   position: absolute;
   top: 0;
   left: 0;
@@ -23,13 +24,4 @@
 
   pointer-events: none;
   white-space: nowrap;
-}
-
-#profiles_show .profile-head .c-brief header h1 {
-  --nick: attr(title);
-}
-
-#profiles_show .profile-head .c-brief header h1::before,
-#profiles_show .profile-head .c-brief header h1::after {
-  content: var(--user-nickname);
 }
