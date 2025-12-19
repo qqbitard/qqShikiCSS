@@ -1,8 +1,8 @@
 :root {
-  --nick: "qqbitard";
-  --glitch-color-1: #00fff9;
-  --glitch-color-2: #ff00c8;
-  --glitch-shift: 2px;
+  --user-nickname: "qqbitard";
+  --f: 1.6rem;
+  --f-size: 15;
+  --bg: transparent;
 }
 @font-face {
   font-family: "GlitchGoblin";
