@@ -48,15 +48,17 @@
 
 #profiles_show .profile-head .c-brief header h1::before,
 #profiles_show .profile-head .c-brief header h1::after {
-  content: attr(data-text);
+  content: var(--user-nickname);
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
 
-  pointer-events: none;
   font: inherit;
   line-height: inherit;
 
-  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
 }
 
 #profiles_show .profile-head .c-brief header h1 {
