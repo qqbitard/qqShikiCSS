@@ -22,3 +22,12 @@
 
   opacity: 0;
 }
+
+#profiles_show .profile-head .c-brief header h1 {
+  --nick: attr(title);
+}
+
+#profiles_show .profile-head .c-brief header h1::before,
+#profiles_show .profile-head .c-brief header h1::after {
+  content: var(--user-nickname);
+}
