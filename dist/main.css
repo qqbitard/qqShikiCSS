@@ -12,27 +12,30 @@
   font-style: normal;
   font-display: swap;
 }
-@keyframes glitch-shift-1 {
-  0%, 90%, 100% { transform: none; opacity: 0; }
-  91% { transform: translate(2px, -1px); opacity: 1; }
-  92% { transform: translate(-2px, 1px); }
-  93% { transform: translate(1px, 0); }
+@keyframes glitch-1 {
+  0% { clip-path: inset(0 0 100% 0); }
+  5% { clip-path: inset(10% 0 60% 0); transform: translate(-2px, -1px); }
+  10% { clip-path: inset(40% 0 30% 0); transform: translate(2px, 1px); }
+  15% { clip-path: inset(0 0 100% 0); transform: none; }
+  100% { clip-path: inset(0 0 100% 0); }
 }
 
-@keyframes glitch-shift-2 {
-  0%, 92%, 100% { transform: none; opacity: 0; }
-  93% { transform: translate(-2px, 1px); opacity: 1; }
-  94% { transform: translate(2px, -1px); }
+@keyframes glitch-2 {
+  0% { clip-path: inset(0 0 100% 0); }
+  6% { clip-path: inset(60% 0 20% 0); transform: translate(2px, 0); }
+  12% { clip-path: inset(20% 0 50% 0); transform: translate(-2px, 0); }
+  18% { clip-path: inset(0 0 100% 0); transform: none; }
+  100% { clip-path: inset(0 0 100% 0); }
 }
 
 #profiles_show .profile-head .c-brief header h1::before {
   color: var(--glitch-color-1);
-  animation: glitch-shift-1 6s infinite steps(1);
+  animation: glitch-1 4.5s infinite;
 }
 
 #profiles_show .profile-head .c-brief header h1::after {
   color: var(--glitch-color-2);
-  animation: glitch-shift-2 7.5s infinite steps(1);
+  animation: glitch-2 6s infinite;
 }
 #profiles_show .profile-head .c-brief header h1 {
   position: relative;
