@@ -93,72 +93,21 @@
     --top: 1;
   }
 }
-/* ===== base element ===== */
 #profiles_show .profile-head .c-brief header h1 {
   position: relative;
   display: inline-block;
+
+  /* скрываем оригинальный текст */
+  color: transparent !important;
 
   font-family: "GlitchGoblin", cursive !important;
   font-size: var(--f);
   line-height: 1;
 
-  color: #1af0dc;
   text-align: center;
-
-  transform: scaleX(var(--scale, 1));
-  animation: glitch-p 11s infinite alternate;
 
   padding-top: 0.1em;
   padding-bottom: 0.15em;
 
   overflow: hidden;
-}
-
-/* ===== glitch layers ===== */
-#profiles_show .profile-head .c-brief header h1::before,
-#profiles_show .profile-head .c-brief header h1::after {
-  font-family: "GlitchGoblin", cursive !important;
-
-  --top: 0;
-  --left: 0;
-  --v-height: 30%;
-
-  --n-tenth: calc(var(--f-size) * .1 * var(--top));
-  --t-cut: calc(var(--n-tenth) / var(--f-size) * 100%);
-  --b-cut: calc(var(--t-cut) + var(--v-height));
-
-  content: var(--user-nickname);
-  position: absolute;
-  inset: 0;
-
-  text-align: center;
-
-  transform: translateX(calc(var(--left) * 100%));
-  filter: drop-shadow(0 0 transparent);
-
-  text-shadow:
-    calc(var(--left) * -3em) 0 .02em lime,
-    calc(var(--left) * -6em) 0 .02em #ff00e1;
-
-  background-color: var(--bg);
-
-  clip-path: polygon(
-    0% var(--t-cut),
-    100% var(--t-cut),
-    100% var(--b-cut),
-    0% var(--b-cut)
-  );
-
-  pointer-events: none;
-}
-
-/* ===== layer animations ===== */
-@media only screen and (min-width: 1024px) {
-  #profiles_show .profile-head .c-brief header h1::before {
-    animation: glitch-b 1.7s infinite alternate-reverse;
-  }
-
-  #profiles_show .profile-head .c-brief header h1::after {
-    animation: glitch-a 3.1s infinite alternate;
-  }
 }
