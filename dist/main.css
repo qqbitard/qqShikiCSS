@@ -13,8 +13,6 @@
   font-display: swap;
 }
 
-/* TEST: should be clearly visible */
-
-#profiles_show .profile-head {
-  background: red !important;
+#profiles_show .profile-head header h1 {
+  font-family: "Bungee Shade", cursive !important;
 }
